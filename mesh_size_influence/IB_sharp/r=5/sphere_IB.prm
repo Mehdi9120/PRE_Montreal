@@ -1,0 +1,178 @@
+# Listing of Parameters
+# ---------------------
+
+
+# --------------------------------------------------
+# Simulation Control
+#---------------------------------------------------
+subsection simulation control
+  set method                  = steady
+set number mesh adapt=5
+set output name=sphere-1
+  set output frequency        = 1
+  set subdivision             = 1
+end
+#---------------------------------------------------
+# FEM
+#---------------------------------------------------
+subsection FEM
+    set velocity order        = 1
+    set pressure order        = 1
+end
+#---------------------------------------------------
+# Timer
+#---------------------------------------------------
+subsection timer
+    set type    = iteration                               # <none|iteration|end>
+end
+#---------------------------------------------------
+# Force
+#---------------------------------------------------
+subsection forces
+    set verbosity             = verbose
+end
+#---------------------------------------------------
+# Initial condition
+#---------------------------------------------------
+subsection initial conditions
+    set type = nodal
+    
+end
+#---------------------------------------------------
+# Physical Properties
+#---------------------------------------------------
+subsection physical properties
+set kinematic viscosity=1.00000
+end
+#---------------------------------------------------
+# Mesh
+#---------------------------------------------------
+subsection mesh
+    set type                 = dealii
+    set grid type            = subdivided_hyper_rectangle
+    set grid arguments       = 2,1,1: -9.66,-8.05,-8.05 : 25.76 , 8.05 ,8.05 : true
+set initial refinement=6
+end
+
+# --------------------------------------------------
+# Boundary Conditions
+#---------------------------------------------------
+subsection boundary conditions
+set number                  = 5
+    subsection bc 0
+	set id = 0
+        set type              = function
+        subsection u
+            set Function expression = 1
+        end
+        subsection v
+            set Function expression = 0
+        end
+        subsection w
+            set Function expression = 0
+        end
+    end
+
+    subsection bc 1
+	set id = 2
+        set type              = slip
+    end
+    subsection bc 2
+	set id = 3
+        set type              = slip
+    end
+    subsection bc 3
+	set id = 4
+        set type              = slip
+    end
+    subsection bc 4
+	set id = 5
+        set type              = slip
+    end
+
+end
+# --------------------------------------------------
+# Manifolds
+#---------------------------------------------------
+subsection manifolds
+  set number                  = 0
+    subsection manifold 0
+        set id                = 0
+        set type              = spherical
+        set arg1              = 8
+        set arg2              = 8
+        set arg3              = 8
+    end
+end
+# --------------------------------------------------
+# Mesh Adaptation Control
+#---------------------------------------------------
+subsection mesh adaptation
+  set type                    = kelly
+  set variable                = velocity
+  set fraction type           = number
+  set max number elements     = 10000000
+  set max refinement level    = 10
+  set min refinement level    = 0
+  set frequency               = 1
+  set fraction refinement     = 0.1
+  set fraction coarsening     = 0.3
+end
+# --------------------------------------------------
+# Non-Linear Solver Control
+#---------------------------------------------------
+subsection non-linear solver
+  set verbosity               = verbose
+  set tolerance               = 1e-4
+  set max iterations          = 10
+end
+# --------------------------------------------------
+# Linear Solver Control
+#---------------------------------------------------
+subsection linear solver
+  set method                                 = amg
+  set max iters                              = 500
+  set relative residual                      = 1e-3
+  set minimum residual                       = 1e-9
+  set ilu preconditioner fill                = 0
+  set ilu preconditioner absolute tolerance  = 1e-10
+  set ilu preconditioner relative tolerance  = 1.00
+  set amg aggregation threshold                 = 1e-20
+  set amg n cycles                              = 1
+  set amg preconditioner ilu absolute tolerance = 1e-20
+  set amg preconditioner ilu fill               =0
+  set amg preconditioner ilu relative tolerance = 1.00
+  set amg smoother overlap                      = 1
+  set amg smoother sweeps                       = 2
+  set amg w cycles                              = false
+  set verbosity               = verbose
+end
+# --------------------------------------------------
+# IB particles
+#---------------------------------------------------
+subsection particles
+	set number of particles = 1
+	set stencil order = 5
+
+	set nb force evaluation = 10000
+
+	set initial refinement = 5
+
+	set refine mesh inside radius factor=0.85
+	set refine mesh outside radius factor=1.15
+
+    subsection particle info 0
+	   set x = 0.0000001
+	   set y = 0.0000001
+	   set z = 0.0000001
+	   set u = 0
+	   set v = 0
+	   set w = 0
+	   set omega x = 0
+	   set omega y = 0
+	   set omega z = 0
+	   set pressure x =0.00001
+	   set pressure y =0.00001
+	   set radius = 0.5
+    end
+end

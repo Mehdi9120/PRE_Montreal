@@ -1,0 +1,266 @@
+Unloading StdEnv/2020
+Running on 4 MPI rank(s)...
+   Number of active cells:       524288
+   Number of degrees of freedom: 2180100
+   Volume of triangulation:      9181.22
+   Number of active cells:       525044
+   Number of degrees of freedom: 2184152
+   Volume of triangulation:      9181.22
+   Number of active cells:       529272
+   Number of degrees of freedom: 2204880
+   Volume of triangulation:      9181.22
+   Number of active cells:       552148
+   Number of degrees of freedom: 2311456
+   Volume of triangulation:      9181.22
+   Number of active cells:       691672
+   Number of degrees of freedom: 2925896
+   Volume of triangulation:      9181.22
+   Number of active cells:       691672
+   Number of degrees of freedom: 2925896
+   Volume of triangulation:      9181.22
+
+
++---------------------------------------------+------------+------------+
+| Total wallclock time elapsed since start    |       145s |            |
+|                                             |            |            |
+| Section                         | no. calls |  wall time | % of total |
++---------------------------------+-----------+------------+------------+
+| refine                          |         5 |       121s |        83% |
+| setup_dofs                      |         6 |      75.4s |        52% |
+| vertices_to_cell_map            |         1 |     0.391s |      0.27% |
++---------------------------------+-----------+------------+------------+
+
+
+*****************************************************************
+Steady iteration :        1/6
+*****************************************************************
+Newton iteration: 0  - Residual:  15.4966
+  -Tolerance of iterative solver is : 0.0154966
+  -Iterative solver took : 4 steps 
+		alpha =      1 res = 1.42
+Newton iteration: 1  - Residual:  1.42
+  -Tolerance of iterative solver is : 0.00142
+  -Iterative solver took : 7 steps 
+		alpha =      1 res = 0.002384
+Newton iteration: 2  - Residual:  0.002384
+  -Tolerance of iterative solver is : 2.384e-06
+  -Iterative solver took : 11 steps 
+		alpha =      1 res = 1.995e-06
+
+
++---------------------------------------------+------------+------------+
+| Total wallclock time elapsed since start    |       388s |            |
+|                                             |            |            |
+| Section                         | no. calls |  wall time | % of total |
++---------------------------------+-----------+------------+------------+
+| assemble_rhs                    |         3 |      33.1s |       8.5% |
+| assemble_sharp                  |         6 |      31.5s |       8.1% |
+| assemble_system                 |         3 |       154s |        40% |
+| output                          |         2 |      15.6s |         4% |
+| setup_AMG                       |         3 |       130s |        34% |
+| solve_linear_system             |         3 |      23.3s |         6% |
++---------------------------------+-----------+------------+------------+
+
++------------------------------------------+
+|  Force  summary particle 0               |
++------------------------------------------+
+particle ID    f_x       f_y       f_z    
+          0 10.971090 -0.000002 -0.000003 
+particle ID    T_x      T_y       T_z    
+          0 -0.000000 0.000001 -0.000001 
+
+*****************************************************************
+Steady iteration :        2/6
+*****************************************************************
+   Number of active cells:       831273
+   Number of degrees of freedom: 3537452
+   Volume of triangulation:      9181
+Newton iteration: 0  - Residual:  0.1393
+  -Tolerance of iterative solver is : 0.0001393
+  -Iterative solver took : 4 steps 
+		alpha =      1 res = 0.0001138
+Newton iteration: 1  - Residual:  0.0001138
+  -Tolerance of iterative solver is : 1.138e-07
+  -Iterative solver took : 13 steps 
+		alpha =      1 res = 1.021e-07
+
+
++---------------------------------------------+------------+------------+
+| Total wallclock time elapsed since start    |       347s |            |
+|                                             |            |            |
+| Section                         | no. calls |  wall time | % of total |
++---------------------------------+-----------+------------+------------+
+| assemble_rhs                    |         2 |      27.1s |       7.8% |
+| assemble_sharp                  |         4 |      21.7s |       6.2% |
+| assemble_system                 |         2 |       123s |        35% |
+| force_evaluation                |         1 |      1.68s |      0.48% |
+| output                          |         1 |      10.5s |         3% |
+| output_forces_ib                |         1 |    0.0403s |         0% |
+| refine                          |         1 |      37.7s |        11% |
+| setup_AMG                       |         2 |       101s |        29% |
+| setup_dofs                      |         1 |        19s |       5.5% |
+| solve_linear_system             |         2 |      22.1s |       6.4% |
+| vertices_to_cell_map            |         1 |     0.853s |      0.25% |
++---------------------------------+-----------+------------+------------+
+
++------------------------------------------+
+|  Force  summary particle 0               |
++------------------------------------------+
+particle ID    f_x       f_y       f_z    
+          0 10.971090 -0.000002 -0.000003 
+          0 10.973630 -0.000000 -0.000000 
+particle ID    T_x      T_y       T_z    
+          0 -0.000000 0.000001 -0.000001 
+          0  0.000000 0.000001 -0.000001 
+
+*****************************************************************
+Steady iteration :        3/6
+*****************************************************************
+   Number of active cells:       1042764
+   Number of degrees of freedom: 4440588
+   Volume of triangulation:      9181
+Newton iteration: 0  - Residual:  0.04723
+  -Tolerance of iterative solver is : 4.723e-05
+  -Iterative solver took : 4 steps 
+		alpha =      1 res = 3.808e-05
+
+
++---------------------------------------------+------------+------------+
+| Total wallclock time elapsed since start    |       244s |            |
+|                                             |            |            |
+| Section                         | no. calls |  wall time | % of total |
++---------------------------------+-----------+------------+------------+
+| assemble_rhs                    |         1 |      17.5s |       7.2% |
+| assemble_sharp                  |         2 |      11.2s |       4.6% |
+| assemble_system                 |         1 |      77.2s |        32% |
+| force_evaluation                |         1 |      1.82s |      0.75% |
+| output                          |         1 |      12.9s |       5.3% |
+| output_forces_ib                |         1 |     0.033s |         0% |
+| refine                          |         1 |      48.8s |        20% |
+| setup_AMG                       |         1 |      62.3s |        26% |
+| setup_dofs                      |         1 |      24.3s |        10% |
+| solve_linear_system             |         1 |       8.5s |       3.5% |
+| vertices_to_cell_map            |         1 |      1.17s |      0.48% |
++---------------------------------+-----------+------------+------------+
+
++------------------------------------------+
+|  Force  summary particle 0               |
++------------------------------------------+
+particle ID    f_x       f_y       f_z    
+          0 10.971090 -0.000002 -0.000003 
+          0 10.973630 -0.000000 -0.000000 
+          0 10.974487  0.000036 -0.000011 
+particle ID    T_x       T_y       T_z    
+          0 -0.000000  0.000001 -0.000001 
+          0  0.000000  0.000001 -0.000001 
+          0  0.000010 -0.000010  0.000020 
+
+*****************************************************************
+Steady iteration :        4/6
+*****************************************************************
+   Number of active cells:       1372779
+   Number of degrees of freedom: 5922952
+   Volume of triangulation:      9181
+Newton iteration: 0  - Residual:  0.01665
+  -Tolerance of iterative solver is : 1.665e-05
+  -Iterative solver took : 5 steps 
+		alpha =      1 res = 9.928e-06
+
+
++---------------------------------------------+------------+------------+
+| Total wallclock time elapsed since start    |       326s |            |
+|                                             |            |            |
+| Section                         | no. calls |  wall time | % of total |
++---------------------------------+-----------+------------+------------+
+| assemble_rhs                    |         1 |      23.3s |       7.2% |
+| assemble_sharp                  |         2 |      12.9s |         4% |
+| assemble_system                 |         1 |       106s |        33% |
+| force_evaluation                |         1 |      2.19s |      0.67% |
+| output                          |         1 |        17s |       5.2% |
+| output_forces_ib                |         1 |    0.0415s |         0% |
+| refine                          |         1 |      67.2s |        21% |
+| setup_AMG                       |         1 |      78.4s |        24% |
+| setup_dofs                      |         1 |      33.4s |        10% |
+| solve_linear_system             |         1 |      12.8s |       3.9% |
+| vertices_to_cell_map            |         1 |      1.55s |      0.48% |
++---------------------------------+-----------+------------+------------+
+
++------------------------------------------+
+|  Force  summary particle 0               |
++------------------------------------------+
+particle ID    f_x       f_y       f_z    
+          0 10.971090 -0.000002 -0.000003 
+          0 10.973630 -0.000000 -0.000000 
+          0 10.974487  0.000036 -0.000011 
+          0 10.975030 -0.000084 -0.000090 
+particle ID    T_x       T_y       T_z    
+          0 -0.000000  0.000001 -0.000001 
+          0  0.000000  0.000001 -0.000001 
+          0  0.000010 -0.000010  0.000020 
+          0  0.000003 -0.000016  0.000013 
+
+*****************************************************************
+Steady iteration :        5/6
+*****************************************************************
+   Number of active cells:       1733573
+   Number of degrees of freedom: 7675468
+   Volume of triangulation:      9181
+Newton iteration: 0  - Residual:  0.02026
+  -Tolerance of iterative solver is : 2.026e-05
+  -Iterative solver took : 4 steps 
+		alpha =      1 res = 1.37e-05
+
+
++---------------------------------------------+------------+------------+
+| Total wallclock time elapsed since start    |       415s |            |
+|                                             |            |            |
+| Section                         | no. calls |  wall time | % of total |
++---------------------------------+-----------+------------+------------+
+| assemble_rhs                    |         1 |      29.6s |       7.1% |
+| assemble_sharp                  |         2 |      15.8s |       3.8% |
+| assemble_system                 |         1 |       132s |        32% |
+| force_evaluation                |         1 |      2.82s |      0.68% |
+| output                          |         1 |      21.4s |       5.2% |
+| output_forces_ib                |         1 |    0.0592s |         0% |
+| refine                          |         1 |      89.6s |        22% |
+| setup_AMG                       |         1 |       102s |        24% |
+| setup_dofs                      |         1 |        48s |        12% |
+| solve_linear_system             |         1 |      15.1s |       3.6% |
+| vertices_to_cell_map            |         1 |      2.04s |      0.49% |
++---------------------------------+-----------+------------+------------+
+
++------------------------------------------+
+|  Force  summary particle 0               |
++------------------------------------------+
+particle ID    f_x       f_y       f_z    
+          0 10.971090 -0.000002 -0.000003 
+          0 10.973630 -0.000000 -0.000000 
+          0 10.974487  0.000036 -0.000011 
+          0 10.975030 -0.000084 -0.000090 
+          0 10.975261 -0.000060 -0.000028 
+particle ID    T_x       T_y       T_z    
+          0 -0.000000  0.000001 -0.000001 
+          0  0.000000  0.000001 -0.000001 
+          0  0.000010 -0.000010  0.000020 
+          0  0.000003 -0.000016  0.000013 
+          0  0.000001 -0.000016  0.000008 
+
+*****************************************************************
+Steady iteration :        6/6
+*****************************************************************
+   Number of active cells:       2163611
+   Number of degrees of freedom: 9558020
+   Volume of triangulation:      9181
+Newton iteration: 0  - Residual:  0.01345
+  -Tolerance of iterative solver is : 1.345e-05
+slurmstepd: error: blg8439 [0] pmixp_client_v2.c:210 [_errhandler] mpi/pmix: ERROR: Error handler invoked: status = -25: Interrupted system call (4)
+slurmstepd: error: run_script_as_user: couldn't change working dir to /home/mehdi912/Simulation/3d_sphere_IB_sharp/L=8.03: No such file or directory
+srun: Job step aborted: Waiting up to 62 seconds for job step to finish.
+slurmstepd: error: *** STEP 20951796.0 ON blg8439 CANCELLED AT 2021-06-11T09:38:59 ***
+slurmstepd: error: Detected 1 oom-kill event(s) in step 20951796.0 cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
+srun: error: blg8439: task 1: Out Of Memory
+slurmstepd: error: run_script_as_user: couldn't change working dir to /home/mehdi912/Simulation/3d_sphere_IB_sharp/L=8.03: No such file or directory
+slurmstepd: error: run_script_as_user: couldn't change working dir to /home/mehdi912/Simulation/3d_sphere_IB_sharp/L=8.03: No such file or directory
+slurmstepd: error: run_script_as_user: couldn't change working dir to /home/mehdi912/Simulation/3d_sphere_IB_sharp/L=8.03: No such file or directory
+slurmstepd: error: run_script_as_user: couldn't change working dir to /home/mehdi912/Simulation/3d_sphere_IB_sharp/L=8.03: No such file or directory
+slurmstepd: error: Detected 1 oom-kill event(s) in step 20951796.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
